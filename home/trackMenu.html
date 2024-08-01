@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Courier List</title>
+    <style>
+        body {
+            background-color: #f9f9fa;
+        }
+
+        table {
+            width: 80%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;
+            border-spacing: 5px 5px;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: green;
+            font-size: 30px;
+        }
+
+        th, td {
+            border: 1px dash;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- Assuming your header content goes here -->
+    </header>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Item's Image</th>
+                <th>Sender Name</th>
+                <th>Receiver Name</th>
+                <th>Receiver Email</th>
+                <th>Action</th>
+            </tr>
+
+            <!-- This part will be populated dynamically with PHP -->
+            <tr align="center">
+                <td>1</td>
+                <td><img src="../images/default_image.jpg" alt="pic" style="max-width: 100px;" /></td>
+                <td>SenderName</td>
+                <td>ReceiverName</td>
+                <td>receiver@example.com</td>
+                <td>
+                    <a href="/home/updationtable.php">Edit</a> ||
+                    <a href="/home/deletecourier.php">Delete</a> ||
+                    <a href="/home/status.php">CheckStatus</a>
+                </td>
+            </tr>
+            <!-- End of dynamic content -->
+
+        </table>
+    </div>
+
+    <script>
+        // Your JavaScript code goes here
+    </script>
+</body>
+
+</html>

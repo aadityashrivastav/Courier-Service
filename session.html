@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Session</title>
+    <!-- Add any necessary styles or links here -->
+</head>
+
+<body>
+    <!-- Your HTML content goes here -->
+
+    <script>
+        // Check if the user is already logged in (client-side)
+        var isUserLoggedIn = <?php echo json_encode(isset($_SESSION["uid"]) && $_SESSION["uid"] === true); ?>;
+
+        if (isUserLoggedIn) {
+            window.location.href = 'home/home.php';
+        }
+    </script>
+</body>
+
+</html>

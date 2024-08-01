@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Query</title>
+</head>
+
+<body>
+    <header>
+        <h1>Asynchronous Query Page</h1>
+        <p>Welcome to the page where asynchronous queries are executed...</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Query Result:</h2>
+            <div id="queryResult">Loading...</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function executeQuery() {
+  
+
+            fetch(endpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'query=' + encodeURIComponent(query)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(result => {
+                // Handle the result from the server
+                document.getElementById('queryResult').innerHTML = result;
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Fetch error:', error);
+            });
+        }
+
+        // Call the executeQuery function when the page loads or as needed
+        window.onload = executeQuery;
+    </script>
+</body>
+
+</html>

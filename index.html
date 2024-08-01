@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        body {
+            background-image: url('/images/10.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align='center' style="margin: 15px; color:seagreen;font-weight: bold;font-family:'Times New Roman', Times, serif">AADITYA's COURIER SERVICE</h1>
+    <hr />
+    <p align='center' style="font-weight: bold;color:orange;font-family:'Times New Roman', Times, serif">The Fastest Courier Service Ever</p>
+    <div>
+        <h5><a href="/admin/adminlogin.php" style="float: right; margin-right:40px; color:blue; margin-top:0px">AdminLogin</a></h5>
+    </div>
+    <div class="container" style="margin-top: 60px; width:50%;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 style="color: #273c75;">Login</h2>
+                <p style="color:#e84118;">Please Fill Your ⮯⮯</p>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter username/emailId" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" onclick="validateForm()" class="btn btn-primary">SignIn</button>
+                        <button onclick="window.location.href='/resetpswd.php'" class="btn btn-danger" style="cursor:pointer">Reset Password</button>
+                    </div>
+                    <p style="color: #e84118;">Don't have an account?⮞➤ <a href="/register.php">Register here</a>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Simple validation for demonstration purposes
+            if (email.trim() === '' || password.trim() === '') {
+                alert("Please enter both email and password.");
+            } else {
+                // Simulate form submission and redirect
+                alert("Welcome 🙏");
+                window.location.href = '/home/home.php';
+            }
+        }
+    </script>
+</body>
+
+</html>

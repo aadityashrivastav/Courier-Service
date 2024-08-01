@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Courier Details</title>
+</head>
+
+<body>
+    <form action="/home/editdata.php" method="POST" enctype="multipart/form-data">
+        <div style="overflow-x:auto;">
+            <table border="0" style="margin-left: auto; margin-right:auto; margin-top:30px; font-weight:bold;border-spacing: 5px 15px;">
+                <th colspan="4" style="text-align: center;background-color:#00FF00; width: 140px; height: 50px;">Update The Details As Required</th>
+                <tr>
+                    <th colspan="2">SENDER</th>
+                    <th colspan="2">RECEIVER</th>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="sname" value="" required></td>
+
+                    <td>Name:</td>
+                    <td><input type="text" name="rname" value="" required></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="semail" value="" readonly></td>
+
+                    <td>Email:</td>
+                    <td><input type="text" name="remail" value="" required></td>
+                </tr>
+                <tr>
+                    <td>PhoneNo.:</td>
+                    <td><input type="number" name="sphone" value="" required></td>
+
+                    <td>PhoneNo.:</td>
+                    <td><input type="number" name="rphone" value="" required></td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="textfield" name="saddress" value="" required></td>
+
+                    <td>Address:</td>
+                    <td><input type="textfield" name="raddress" value="" required></td>
+                </tr>
+                <tr>
+                    <td colspan="4">✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️✖️</td>
+                </tr>
+                <tr>
+                    <td>Weight:</td>
+                    <td><input type="number" name="wgt" value="" required></td>
+
+                    <td>ReceiptNo.:</td>
+                    <td><input type="number" name="billno" value="" required></td>
+                </tr>
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" name="date" value="" readonly /></td>
+                    <td>Items Image:</td>
+                    <td><input type="file" name="simg" value=""></td>
+                </tr>
+                <tr>
+                    <input type="hidden" name="idd" value="" />
+                    <td colspan="4" align="center"><input type="submit" name="submit" value="Update" style="background-color: orange; border-radius: 15px; width: 140px; height: 50px;cursor:pointer;"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>

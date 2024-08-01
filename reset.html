@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Password</title>
+    <style>
+        body {
+            background-image: url('images/Reset.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="resetForm">
+        <table border="0px solid" style="margin-left: auto; margin-right:auto; margin-top:70px; font-weight:bold;border-spacing: 50px 30px;">
+            <th colspan="3" style="text-align: center;font-size:35px; width: 300px; height: 70px;font-weight:bold;">To chalo new Password daalo bina kisi bakchodi k</th>
+            <tr>
+                <td colspan="2" style="font-size: 20px;font-weight:bold">New Password</td>
+                <td><input type="password" id="pass" placeholder="enter new password" style="font-size: 20px;font-weight:bold" required /></td>
+            </tr>
+
+            <tr>
+                <td colspan="3" align="center">
+                    <button type="button" onclick="updatePassword()" style="background-color: red; border-radius: 15px; width: 140px; height: 50px;">Update</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function updatePassword() {
+            var newPassword = document.getElementById('pass').value;
+
+            fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'submit=true&pass=' + encodeURIComponent(newPassword)
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(result => {
+                    // Handle the result from the server
+                    alert(result);
+                    window.location.href = '/logout.html';
+                })
+                .catch(error => {
+                    // Handle errors
+                    console.error('Fetch error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

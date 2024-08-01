@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Courier</title>
+</head>
+
+<body>
+    <script>
+    
+
+        // Assuming confirmation is required before deletion
+        var userConfirmation = confirm("Are you sure you want to delete this courier?");
+
+        if (userConfirmation) {
+            alert('Courier Deletion Processed Successfully :)');
+            window.open('/home/trackMenu.php', '_self');
+        } else {
+            alert('Courier Deletion Cancelled.');
+            window.open('/home/trackMenu.php', '_self');
+        }
+    </script>
+</body>
+
+</html>

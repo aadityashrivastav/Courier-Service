@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <!-- Add any necessary styles or links here -->
+</head>
+
+<body>
+    <header>
+        <h1>Logout Page</h1>
+        <p>Welcome to the logout page. You are being logged out...</p>
+    </header>
+
+    <main>
+        <!-- Your HTML content goes here -->
+
+        <script>
+            function logout() {
+                // Clear any session-related information stored in the browser
+                // Note: This is a simplified example, and it won't handle server-side session destruction
+                // You may need a server-side endpoint for actual logout logic
+
+                // Clear any client-side session-related information
+                document.cookie = "PHPSESSID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+                // Redirect to the login page
+                window.location.href = '/index.php';
+            }
+
+            // Call the logout function when the page loads (optional)
+            window.onload = logout;
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

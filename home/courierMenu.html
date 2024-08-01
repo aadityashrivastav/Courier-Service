@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <style>
+        body {
+            background-image: url('../images/1920_1080.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/home/courierMenu.php" method="POST" enctype="multipart/form-data">
+        <div style="overflow-x:auto;">
+            <table border="0px solid" style="margin: auto; font-weight:bold;border-spacing: 5px 15px;">
+                <th colspan="4" style="text-align: center;background-color:#00FF00; width: 140px; height: 50px;">Fill The Details Of Sender & Receiver</th>
+                <tr>
+                    <td colspan="4" style="text-align: center;">
+                        <hr>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <th colspan="2">SENDER</th>
+                    <th colspan="2">RECEIVER</th>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2"></th>
+                    <th colspan="2"></th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="sname" placeholder="Sender FullName" required></td>
+
+                    <td>Name:</td>
+                    <td><input type="text" name="rname" placeholder="Sender FullName" required></td>
+                </tr>
+                <!-- ... (rest of the form fields) ... -->
+                <tr>
+                    <td colspan="4" align="center"><input type="submit" name="submit" value="Place Order" style="background-color: orange; border-radius: 15px; width: 140px; height: 50px;cursor:pointer;"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
+

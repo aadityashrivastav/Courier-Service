@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Data Information</title>
+    <!-- Add any necessary styles or links here -->
+    <style>
+        /* body {
+            background-image: url('../images/your_background_image.jpg'); /* Add your background image path */
+            /* background-size: cover; */
+        /* } */
+
+        table {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            font-weight: bold;
+            border-spacing: 5px 5px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            background-color: indigo;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admintitle">
+        <div>
+            <h5><a href="/admin/dashboard.php" style="float: left; margin-left:20px; color:aliceblue;">BackToDashboard</a></h5>
+            <h5><a href="/logout.php" style="float: right; margin-right:20px; color:aliceblue;">LogOut</a></h5>
+        </div>
+        <h1 align='center' style="text-shadow: 0.1em 0.1em 0.15em #f9829b;">Search Data Information</h1>
+    </div>
+
+    <div style="overflow-x:auto;">
+        <table>
+            <tr>
+                <th>No.</th>
+                <th>Items Image</th>
+                <th>Sender Name</th>
+                <th>Receiver Name</th>
+                <th>Sender Email</th>
+                <th>Action</th>
+            </tr>
+            <tr align="center">
+                <td>1</td>
+                <td><img src="../dbimages/sample.jpg" alt="pic" style="max-width: 100px;" /> </td>
+                <td>Sender 1</td>
+                <td>Receiver 1</td>
+                <td>sender@example.com</td>
+                <td><a href="/admin/datadeleted.php">Delete</a></td>
+            </tr>
+            <!-- Repeat the above row for additional data entries -->
+
+        </table>
+    </div>
+
+    <!-- Your JavaScript code goes here, if needed -->
+
+</body>
+
+</html>
